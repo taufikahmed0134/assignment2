@@ -13,16 +13,20 @@ body {
 }
 img {
   width: 100%;
+  transition: transform 0.2s ease;
 }
 /* -----------------utilities-----------------*/
 .img-50 {
   width: 50%;
 }
+.img-50:hover {
+  transform: scale(1.1);
+}
 .img-70 {
   width: 70%;
 }
 .pt-100 {
-  padding-left: 100px;
+  padding-top: 100px;
 }
 .wrapper {
   margin: 0 auto;
@@ -90,4 +94,17 @@ footer img {
 footer .icons img {
   width: 32px;
   height: 32px;
+}
+@media (max-width: 675px) {
+  .row {
+    flex-direction: column;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 330px);
+  }
+  .img-50,
+  .img-70 {
+    width: 100%;
+    padding-top: 50px;
+  }
 }
